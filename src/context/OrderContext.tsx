@@ -3,6 +3,14 @@ import { FoodItem, Order, OrderStatus, CartItem, Rating, AnalyticsSummary } from
 import { INITIAL_FOOD_ITEMS, INITIAL_STORES } from '../lib/initialData';
 import { supabase, isSupabaseConfigured, syncChannel } from '../lib/supabase';
 import { useAuth } from './AuthContext';
+import {
+  TimeSlot,
+  NextSlotInfo,
+  ORDERING_TIME_SLOTS,
+  getCurrentOrderingSlot,
+  getNextOrderingSlot,
+  getSecondsRemainingInSlot,
+} from '../lib/timeUtils';
 
 interface OrderContextType {
   foodItems: FoodItem[];
@@ -25,6 +33,16 @@ interface OrderContextType {
   getAnalyticsForStore: (storeId: string) => AnalyticsSummary;
   activeOrderNotification: string | null;
   dismissNotification: () => void;
+  
+  // Real-time Ordering Time Window state & helpers
+  isOrderingOpen: boolean;
+  currentSlot: TimeSlot | null;
+  nextSlotInfo: NextSlotInfo;
+  timeRemainingInSlot: number;
+  effectiveTime: Date;
+  simulatedPreset: string;
+  setSimulatedPreset: (preset: string) => void;
+  orderingTimeSlots: TimeSlot[];
 }
 
 const OrderContext = createContext<OrderContextType | undefined>(undefined);
