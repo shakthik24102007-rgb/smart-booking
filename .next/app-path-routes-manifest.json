@@ -1,0 +1,22 @@
+{
+  "/api/auth/logout/route": "/api/auth/logout",
+  "/api/auth/session/route": "/api/auth/session",
+  "/api/auth/staff/route": "/api/auth/staff",
+  "/_not-found/page": "/_not-found",
+  "/api/auth/student/route": "/api/auth/student",
+  "/api/orders/[id]/route": "/api/orders/[id]",
+  "/api/notifications/route": "/api/notifications",
+  "/api/orders/route": "/api/orders",
+  "/api/shops/[id]/route": "/api/shops/[id]",
+  "/api/staff/menu/route": "/api/staff/menu",
+  "/api/reviews/route": "/api/reviews",
+  "/api/shops/route": "/api/shops",
+  "/api/staff/reports/route": "/api/staff/reports",
+  "/page": "/",
+  "/staff/menu/page": "/staff/menu",
+  "/staff/page": "/staff",
+  "/student/page": "/student",
+  "/student/orders/page": "/student/orders",
+  "/student/store/[id]/page": "/student/store/[id]",
+  "/staff/reports/page": "/staff/reports"
+}
