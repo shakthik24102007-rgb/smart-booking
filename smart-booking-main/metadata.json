@@ -1,0 +1,6 @@
+{
+  "name": "Campus Food Pre-Ordering",
+  "description": "Campus food pre-ordering platform with worker dashboard, stock control, order status tracking, digital receipts, and ratings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
